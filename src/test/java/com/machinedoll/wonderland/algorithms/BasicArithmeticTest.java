@@ -8,6 +8,7 @@ import java.util.List;
 
 public class BasicArithmeticTest {
     BasicArithmetic basicObj = new BasicArithmetic();
+    long startTime = System.currentTimeMillis();
 
     @Before
     public void setUp() {
@@ -49,7 +50,6 @@ public class BasicArithmeticTest {
 
     @Test
     public void getAsAProductOfItsPrimeFactor() {
-        long startTime = System.currentTimeMillis();
         List<Long> res = basicObj.getAsAProductOfItsPrimeFactor(10L);
         long interval = System.currentTimeMillis() - startTime;
         res.stream().forEach(elem -> System.out.println(elem));

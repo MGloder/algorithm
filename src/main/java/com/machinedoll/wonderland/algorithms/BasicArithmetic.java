@@ -1,14 +1,12 @@
 package com.machinedoll.wonderland.algorithms;
 
 import com.machinedoll.wonderland.lib.AlgorithmRunner;
-import com.sun.tools.javac.util.Pair;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 public class BasicArithmetic implements AlgorithmRunner {
     private Config conf;
