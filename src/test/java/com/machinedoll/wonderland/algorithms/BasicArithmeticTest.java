@@ -13,7 +13,6 @@ public class BasicArithmeticTest {
     @Before
     public void setUp() {
         System.out.println("--------------------");
-        long startTime = System.currentTimeMillis();
     }
 
     public void tearDown() {
