@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f968720-40d6-42f1-8045-7f172a6ee63a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,13 +15,13 @@
     <session id="-1957067813">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2266" />
+          <entry key="java" value="2915" />
           <entry key="scala" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2266" />
+          <entry key="JAVA" value="2915" />
           <entry key="Scratch" value="13" />
         </counts>
       </usages-collector>
@@ -56,11 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            <state relative-caret-position="315">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state relative-caret-position="319">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#890#891#0" expanded="true" />
@@ -172,6 +172,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>next</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -182,8 +187,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyExample.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.scala" />
         <option value="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Tester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java" />
       </list>
     </option>
   </component>
@@ -681,7 +686,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573026919948" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573030469278" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -838,7 +843,7 @@
       <workItem from="1571050779941" duration="500000" />
       <workItem from="1572924360971" duration="1612000" />
       <workItem from="1572932129652" duration="6748000" />
-      <workItem from="1573026671695" duration="257000" />
+      <workItem from="1573026671695" duration="3027000" />
     </task>
     <servers />
   </component>
@@ -875,7 +880,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23568000" />
+    <option name="totallyTimeSpent" value="26338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-750" width="1920" height="1177" extended-state="6" />
@@ -1053,24 +1058,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        <state relative-caret-position="315">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/machinedoll/wonderland/features/java/ConcurrencyCyclicBarrierExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        <state relative-caret-position="319">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
           </folding>
         </state>
       </provider>

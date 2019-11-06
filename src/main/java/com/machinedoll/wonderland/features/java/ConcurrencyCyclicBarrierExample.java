@@ -31,7 +31,7 @@ public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
 
   @Override
   public void run() {
-    runSimulation(5, 3);
+    runSimulation(5, 2);
   }
 
   private void runSimulation(int numWorkers, int numberOfPartialResults) {
@@ -54,11 +54,10 @@ public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
     public void run() {
       String thisThreadName = Thread.currentThread().getName();
       List<Integer> partialResult = new ArrayList<>();
-      IntStream.range(1, NUM_PARTIAL_RESULTS).map(action -> {
-        Integer num = random.nextInt();
+      IntStream.range(0, NUM_PARTIAL_RESULTS).forEach(action -> {
+        Integer num = random.nextInt(10);
         partialResult.add(num);
         System.out.println(thisThreadName + ": Crunching some numbers! Final result - " + num);
-        return num;
       });
 
       partialResults.add(partialResult);
@@ -79,12 +78,12 @@ public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
     public void run() {
       String thisThreadName = Thread.currentThread().getName();
 
-      System.out.println(thisThreadName + ": Computing sum of" + NUM_WORKERS +
-          "workers, having" + NUM_PARTIAL_RESULTS + " results each.");
+      System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS +
+          " workers, having " + NUM_PARTIAL_RESULTS + " results each.");
 
-      int sum = partialResults.stream().map(threadResult -> {
-        System.out.println("Adding ");
-        return threadResult.stream().reduce(0, (subtotal, partialResult) -> subtotal + partialResult);
+      int sum = partialResults.stream().map(partialResult -> {
+        System.out.println("Adding " + partialResult);
+        return partialResult.stream().reduce(0, (x, y) -> x + y);
       }).reduce(0, Integer::sum);
 
       System.out.println(thisThreadName + ": Final result = " + sum);
