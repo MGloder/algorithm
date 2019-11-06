@@ -31,29 +31,23 @@ public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
 
   @Override
   public void run() {
-    cyclicBarrier = new CyclicBarrier(1);
-
+    runSimulation(5, 3);
   }
 
-  class AggregatorThread implements Runnable {
-    @Override
-    public void run() {
-      String thisThreadName = Thread.currentThread().getName();
+  private void runSimulation(int numWorkers, int numberOfPartialResults) {
+    NUM_PARTIAL_RESULTS = numberOfPartialResults;
+    NUM_WORKERS = numWorkers;
 
-      System.out.println(thisThreadName + ": Computing sum of" + NUM_WORKERS +
-          "workers, having" + NUM_PARTIAL_RESULTS + " results each.");
+    cyclicBarrier = new CyclicBarrier(NUM_WORKERS, new AggregatorThread());
 
-      int sum = 0;
+    System.out.println("Spawning " + NUM_WORKERS + " worker thread to compute " + NUM_PARTIAL_RESULTS + " partial results each ");
 
-      partialResults.stream().map(threadResult -> {
-        System.out.println("Adding ");
-        threadResult.stream().reduce(sum, (partialResult) ->  sum + partialResult);
-        return Integer.valueOf(0);
-      });
-
-    }
+    IntStream.range(0, NUM_WORKERS).forEach(i -> {
+      Thread worker = new Thread(new NumberCruncherThread());
+      worker.setName("Thread " + i);
+      worker.start();
+    });
   }
-
 
   class NumberCruncherThread implements Runnable {
     @Override
@@ -77,8 +71,24 @@ public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
       } catch (BrokenBarrierException e) {
         e.printStackTrace();
       }
-
-
     }
   }
+
+  class AggregatorThread implements Runnable {
+    @Override
+    public void run() {
+      String thisThreadName = Thread.currentThread().getName();
+
+      System.out.println(thisThreadName + ": Computing sum of" + NUM_WORKERS +
+          "workers, having" + NUM_PARTIAL_RESULTS + " results each.");
+
+      int sum = partialResults.stream().map(threadResult -> {
+        System.out.println("Adding ");
+        return threadResult.stream().reduce(0, (subtotal, partialResult) -> subtotal + partialResult);
+      }).reduce(0, Integer::sum);
+
+      System.out.println(thisThreadName + ": Final result = " + sum);
+    }
+  }
+
 }
