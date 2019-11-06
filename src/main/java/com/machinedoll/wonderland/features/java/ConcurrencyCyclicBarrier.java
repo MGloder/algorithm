@@ -31,7 +31,7 @@ public class ConcurrencyCyclicBarrier implements AlgorithmRunner {
 
   @Override
   public void run() {
-    runSimulation(5, 2);
+    runSimulation(1000, 200);
   }
 
   private void runSimulation(int numWorkers, int numberOfPartialResults) {
