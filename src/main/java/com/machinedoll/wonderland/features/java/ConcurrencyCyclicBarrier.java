@@ -22,7 +22,7 @@ import java.util.stream.IntStream;
     Semaphore
     SynchronousQueue
  */
-public class ConcurrencyCyclicBarrierExample implements AlgorithmRunner {
+public class ConcurrencyCyclicBarrier implements AlgorithmRunner {
   private CyclicBarrier cyclicBarrier;
   private List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
   private Random random = new Random();
