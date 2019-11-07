@@ -1,4 +1,4 @@
-package com.machinedoll.wonderland.features.java;
+package com.machinedoll.wonderland.features.java.concurrency;
 
 import com.machinedoll.wonderland.lib.AlgorithmRunner;
 
