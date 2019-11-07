@@ -41,7 +41,6 @@ public class ConcurrencyPhaser implements AlgorithmRunner {
     ph.arriveAndAwaitAdvance();
 
     ph.arriveAndDeregister();
-    System.out.println("End of Context");
   }
 
   class LongRunningAction implements Runnable {

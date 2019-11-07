@@ -5,6 +5,7 @@ import com.machinedoll.wonderland.factory.AlgorithmFactory;
 import com.machinedoll.wonderland.features.java.ConcurrencyCountDownLatch;
 import com.machinedoll.wonderland.features.java.ConcurrencyCyclicBarrier;
 import com.machinedoll.wonderland.features.java.ConcurrencyPhaser;
+import com.machinedoll.wonderland.features.java.ConcurrencySynchronousQueue;
 import com.machinedoll.wonderland.lib.AlgorithmRunner;
 
 public class Runner {
@@ -13,11 +14,12 @@ public class Runner {
     AlgorithmFactory.register(ConcurrencyCyclicBarrier.class);
     AlgorithmFactory.register(ConcurrencyCountDownLatch.class);
     AlgorithmFactory.register(ConcurrencyPhaser.class);
+    AlgorithmFactory.register(ConcurrencySynchronousQueue.class);
   }
 
   public static void main(String[] args) throws Exception {
     prepareRuntimeEnvironment();
-    AlgorithmRunner runner = AlgorithmFactory.getAlgorithmRunner("ConcurrencyPhaser");
+    AlgorithmRunner runner = AlgorithmFactory.getAlgorithmRunner("ConcurrencySynchronousQueue");
     runner.run();
   }
 }

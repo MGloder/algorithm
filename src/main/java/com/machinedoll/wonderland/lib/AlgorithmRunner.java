@@ -1,5 +1,5 @@
 package com.machinedoll.wonderland.lib;
 
 public interface AlgorithmRunner {
-    void run();
+    void run() throws InterruptedException;
 }
