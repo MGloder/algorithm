@@ -2,12 +2,9 @@ package com.machinedoll.wonderland.features.java.core;
 
 import com.machinedoll.wonderland.lib.AlgorithmRunner;
 
-import java.util.Collections;
-import java.util.stream.Collectors;
-
 public class Optional<I extends Number> implements AlgorithmRunner {
   @Override
-  public void run() throws InterruptedException {
+  public void run() {
     simulation();
   }
 
@@ -28,6 +25,5 @@ public class Optional<I extends Number> implements AlgorithmRunner {
   private java.util.Optional<Object> getEmptyInteger() {
     return java.util.Optional.empty();
   }
-
 
 }

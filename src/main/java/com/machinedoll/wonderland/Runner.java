@@ -21,7 +21,7 @@ public class Runner {
 
   public static void main(String[] args) throws Exception {
     prepareRuntimeEnvironment();
-    AlgorithmRunner runner = AlgorithmFactory.getAlgorithmRunner("Optional");
+    AlgorithmRunner runner = AlgorithmFactory.getAlgorithmRunner("ConcurrencyPhaser");
     runner.run();
   }
 }
